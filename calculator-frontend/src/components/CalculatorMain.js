@@ -1,8 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { CalculatorScreen } from './CalculatorScreen';
 
 export const CalculatorMain = ()  => {
 
+    const [displayValue, setDisplayValue] = useState("");
+    const [inputError, setInputError] = useState(false);
+    const [inputErrorMessage, setInputErrorMessage] = useState(false);
+    const [result, setResult] = useState("");
+
+
+
+    const onKeyDown = (event) => {
+        console.log(event.key);
+
+
+        if (event.key === "Enter" || event.key === "=") {
+
+            computeResult();
+            event.preventDefault();
+        }
+        
+
+
+    }
+
+    const computeResult = () => {
+        setResult(eval(displayValue))
+    }
 
     return (
 
@@ -12,7 +36,16 @@ export const CalculatorMain = ()  => {
                 {/* <div className='border-theme-pink' style={{borderLeft: "0px"}}> */}
                 <div className='module'>
 
-                    <CalculatorScreen />
+                    <CalculatorScreen 
+                                displayValue={displayValue}
+                                result={result}
+                                inputError={inputError} inputErrorMessage={inputErrorMessage}
+                                setDisplayValue={setDisplayValue}
+                                setInputError ={setInputError}
+                                setInputErrorMessage={setInputErrorMessage}
+                                setResult={setResult}
+                                onKeyDown={onKeyDown}
+                                />
 
                     <div className='row'>
                         <div className='col-2'>
