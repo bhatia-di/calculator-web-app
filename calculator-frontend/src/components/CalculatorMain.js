@@ -11,7 +11,6 @@ export const CalculatorMain = ()  => {
 
                 {/* <div className='border-theme-pink' style={{borderLeft: "0px"}}> */}
                 <div className='module'>
-                    <span className="display-6 color-pink mt-2">Calculator Main</span>
 
                     <CalculatorScreen />
 
