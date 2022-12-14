@@ -8,6 +8,11 @@ body {
   background-color: #3E2723;
 
 }
+input {
+  background-color: #3E2723 !important;
+  color: #ff8a80;
+
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -97,4 +102,9 @@ code {
       #ff8a80, 
       rgba(0, 0, 0, 0)
     ) 1 100%;
+}
+
+.shiftToBottonEnd {
+  display: inline-block;
+  align-self: flex-end;
 }
