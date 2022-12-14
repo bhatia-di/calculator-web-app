@@ -23,6 +23,11 @@ export const CalculatorMain = (CalculatorMainProps)  => {
 
 
     }
+    const appendDisplayValue = (value) => {
+        console.log(displayValue + value);
+        setDisplayValue(displayValue + value);
+            
+    }
 
     const computeResult = () => {
         const res = eval(displayValue);
@@ -59,17 +64,17 @@ export const CalculatorMain = (CalculatorMainProps)  => {
                                 />
 
                     <div className='row'>
-                        <div className='col-2'>
+                        {/* <div className='col-2'>
                             <button className="btn color-white">x!</button>
+                        </div> */}
+                        <div className='col-2'>
+                            <button onClick={() => appendDisplayValue("(")} className="btn color-white">(</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-white">(</button>
+                            <button onClick={() => appendDisplayValue(")")} className="btn color-white">)</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-white">)</button>
-                        </div>
-                        <div className='col-2'>
-                            <button className="btn color-white">%</button>
+                            <button onClick={() => appendDisplayValue("%")} className="btn color-white">%</button>
                         </div>
                         <div className='col-2'>
                             <button className="btn color-white">CE</button>
@@ -81,44 +86,44 @@ export const CalculatorMain = (CalculatorMainProps)  => {
 
 
                     <div className='row'>
-                        <div className='col-2'>
+                        {/* <div className='col-2'>
                             <button className="btn color-white">ln</button>
+                        </div> */}
+                        <div className='col-2'>
+                            <button onClick={() => appendDisplayValue("7")}  className="btn color-pink hover-white">7</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">7</button>
+                            <button onClick={() => appendDisplayValue("8")} className="btn color-pink hover-white">8</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">8</button>
+                            <button onClick={() => appendDisplayValue("9")} className="btn color-pink hover-white">9</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">9</button>
+                            <button onClick={() => appendDisplayValue("/")} className="btn color-white">/</button>
                         </div>
-                        <div className='col-2'>
-                            <button className="btn color-white">/</button>
-                        </div>
-                        <div className='col-2'>
+                        {/* <div className='col-2'>
                             <button className="btn color-white">CE</button>
-                        </div>
+                        </div> */}
                         <div className='col-2'>
                         </div>
                     </div>
 
 
                     <div className='row'>
-                        <div className='col-2'>
+                        {/* <div className='col-2'>
                             <button className="btn color-white">log</button>
+                        </div> */}
+                        <div className='col-2'>
+                            <button onClick={() => appendDisplayValue("4")} className="btn color-pink hover-white">4</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">4</button>
+                            <button onClick={() => appendDisplayValue("5")} className="btn color-pink hover-white">5</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">5</button>
+                            <button onClick={() => appendDisplayValue("6")} className="btn color-pink hover-white">6</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">6</button>
-                        </div>
-                        <div className='col-2'>
-                            <button className="btn color-white">*</button>
+                            <button onClick={() => appendDisplayValue("*")} className="btn color-white">*</button>
                         </div>
                         <div className='col-2'>
                         </div>
@@ -127,20 +132,20 @@ export const CalculatorMain = (CalculatorMainProps)  => {
 
 
                     <div className='row'>
-                        <div className='col-2'>
+                        {/* <div className='col-2'>
                             <button className="btn color-white">√</button>
+                        </div> */}
+                        <div className='col-2'>
+                            <button onClick={() => appendDisplayValue("1")} className="btn color-pink hover-white">1</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">1</button>
+                            <button onClick={() => appendDisplayValue("2")} className="btn color-pink hover-white">2</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">2</button>
+                            <button onClick={() => appendDisplayValue("3")} className="btn color-pink hover-white">3</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">3</button>
-                        </div>
-                        <div className='col-2'>
-                            <button className="btn color-white">-</button>
+                            <button  onClick={() => appendDisplayValue("-")} className="btn color-white">-</button>
                         </div>
                         <div className='col-2'>
                         </div>
@@ -153,16 +158,16 @@ export const CalculatorMain = (CalculatorMainProps)  => {
                             <button className="btn"> </button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">0</button>
+                            <button onClick={() => appendDisplayValue("0")} className="btn color-pink hover-white">0</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-pink hover-white">.</button>
+                            <button onClick={() => appendDisplayValue(".")} className="btn color-pink hover-white">.</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-white">=</button>
+                            <button onClick={() => computeResult()} className="btn color-white">=</button>
                         </div>
                         <div className='col-2'>
-                            <button className="btn color-white">+</button>
+                            <button onClick={() => appendDisplayValue("+")} className="btn color-white">+</button>
                         </div>
                         <div className='col-2'>
                         </div>
