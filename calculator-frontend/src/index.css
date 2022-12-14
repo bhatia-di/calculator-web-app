@@ -61,6 +61,8 @@ code {
   border-left: 1px solid #ff8a80;
 
 }
+
+
 .border-bottom-theme-pink {
   border-bottom: 1px solid #ff8a80;
 
@@ -139,4 +141,7 @@ code {
 
 .f-600 {
   font-weight: 600;
+}
+.f-650 {
+  font-weight: 650 !important;
 }

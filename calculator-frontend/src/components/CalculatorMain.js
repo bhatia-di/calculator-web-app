@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { CalculatorScreen } from './CalculatorScreen';
 
-export const CalculatorMain = ()  => {
+export const CalculatorMain = (CalculatorMainProps)  => {
 
     const [displayValue, setDisplayValue] = useState("");
     const [inputError, setInputError] = useState(false);
@@ -25,7 +25,18 @@ export const CalculatorMain = ()  => {
     }
 
     const computeResult = () => {
-        setResult(eval(displayValue))
+        const res = eval(displayValue);
+        setResult(res);
+        const histObject = {
+
+            timestamp: new Date().toISOString(),
+            inputString: displayValue,
+            result: res
+
+        }
+
+        CalculatorMainProps.addHistObject(histObject);
+
     }
 
     return (
