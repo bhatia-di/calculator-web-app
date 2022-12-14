@@ -25,6 +25,10 @@ code {
   color: #ff8a80;
 
 }
+.color-white {
+  color: white;
+
+}
 
 .color-pink-one {
   color: #ff5252;
@@ -36,6 +40,11 @@ code {
   border-radius: 5px;
 
 }
+.border-bottom-theme-pink {
+  border-bottom: 1px solid #ff8a80;
+
+}
+
 
 .w-20 {
   width: 20vw;
@@ -49,6 +58,43 @@ code {
   height: 80vh !important;
 }
 
+.h-20 {
+  height: 20vh !important;
+}
+
 .height-inherit {
   height: inherit;
+}
+.opacity-5 {
+  opacity: 0.5;
+}
+
+.hover-white:hover {
+  color: whitesmoke !important;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.module {
+  padding: 1rem;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #ff8a80, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.module-left {
+  padding: 1rem;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to right, 
+      #ff8a80, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
 }
