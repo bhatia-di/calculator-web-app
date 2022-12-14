@@ -31,7 +31,7 @@ export const CalculatorMain = (CalculatorMainProps)  => {
 
     const computeResult = () => {
         const res = eval(displayValue);
-        setResult(res);
+        setResult(Math.round((res + Number.EPSILON) * 100) / 100);
         const histObject = {
 
             timestamp: new Date().toISOString(),

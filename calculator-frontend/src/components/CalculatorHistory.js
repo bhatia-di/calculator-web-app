@@ -16,7 +16,7 @@ export const CalculatorHistory = (HistoryProps)  => {
     if (HistoryProps.history.length > 0) {
         return (
 
-            <div className='container height-80 p-2'>
+            <div className='container overflowy height-80 p-2'>
                 <div className='row p-2 m-2'>
                     <div className='col-12'>
     

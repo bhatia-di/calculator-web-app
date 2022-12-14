@@ -145,3 +145,8 @@ code {
 .f-650 {
   font-weight: 650 !important;
 }
+
+.overflowy {
+  overflow-y:auto;
+  height: 70vh;
+}
